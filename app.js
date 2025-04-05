@@ -1,7 +1,10 @@
 // Configuration
 // API key should be moved to a separate config file that is gitignored
 // Load configuration from config.js
-const config = window.config || {};
+const config = {
+    API_KEY: process.env.API_KEY,
+    API_BASE_URL: 'https://v6.exchangerate-api.com/v6/'
+};
 const API_KEY = config.API_KEY || ''; // Use empty string as fallback
 const API_BASE_URL = config.API_BASE_URL || 'https://v6.exchangerate-api.com/v6/';
 const BASE_CURRENCY = 'USD';
